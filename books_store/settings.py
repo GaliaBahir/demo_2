@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'playground',
     'debug_toolbar',
+    'websockets_demo',
+    'playground',
     'store',
-    'tags'
+    'tags',
 ]
 
 CORS_ALLOWED_ORIGINS = [

@@ -8,6 +8,7 @@ django = "*"
 django-debug-toolbar = "*"
 django-cors-headers = "*"
 pillow = "*"
+coverage = "*"
 
 [dev-packages]
 

@@ -9,6 +9,7 @@ django-debug-toolbar = "*"
 django-cors-headers = "*"
 pillow = "*"
 coverage = "*"
+channels = "*"
 
 [dev-packages]
 

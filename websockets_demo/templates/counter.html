@@ -1,9 +1,36 @@
-<html>
-    <body>
-        {% if counter %}
-        <h1>Counter =  {{ counter }}</h1>
-        {% else %}
-        <h1>Counter = 0</h1>
-        {% endif %} 
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Websocket example</title>
+</head>
+
+<style>
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #333;
+    }
+
+    #counter {
+        font-size: 1.6rem;
+        color: white;
+    }
+
+</style>
+<body>
+<p id="counter"></p>
+<script>
+    var socket = new WebSocket("ws://localhost:8000/ws/counter/");
+
+    socket.onmessage = function (event) {
+        var data = JSON.parse(event.data);
+        console.log(data);
+        document.querySelector('#counter').innerHTML = data.counter;
+    }
+</script>
+</body>
 </html>
